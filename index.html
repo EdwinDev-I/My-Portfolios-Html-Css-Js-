@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>My-Portfolios</title>
+  <title>My-Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
 
@@ -12,43 +12,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/styles-1.css">
+  <link rel="stylesheet" href="styles/mediaquerys.css">
 </head>
 
 <body>
-  <div class="header">
-    <div class="my-name">
-      <a href="index.html" class="my-name-link">
-        EDDY.DEV
-      </a>
+  <nav id="desktop-nav">
+    <div class="logo">EDDY.DEV</div>
+    <div>
+      <ul class="nav-link">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="content">
-      <div class="content1">
-        <a href="">Contact</a>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">EDDY.DEV</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="content2">
-        <a href="">About</a>
-      </div>
-      <div class="content3">
-        <a href="">Projects</a>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
     </div>
-    <div class="">
-      <img src="icons/menu-icon.svg" id="navbar" class="hambuger js-hambuger" alt="Menu Icon">
+  </nav>
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./asserts/profile-pic1.jpeg" alt="EDDY.DEV profile picture">
     </div>
-  </div>
-  <div class="js-displays-Contents"></div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1>EDDY_DEV</h1>
+      <p class="section__text__p2">FullStack Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./asserts/resume-example.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+      </div>
+      <div id="socials-container">
+        <img src="./asserts/linkedin.png" alt="My linkedin profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ifeanyi-mgbolu-34245b383/'">
+        <img src="./asserts/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/EdwinDev-I'">
+      </div>
+    </div>
+  </section>
 
-  <div class="main-Container">
-    <div id="animated-text" class="animated-text"></div>
-  </div>
-
-  <div class="button-container">
-    <div class="discription">We deliver exceptional <span style="color: #3c0996;">tech-driven</span> services tailored
-      to meet your needs.</div>
-    <button class="button-get">Get Started</button>
-  </div>
-
-  <script type="module" src="js/header.js"></script>
+  <script src="js/header.js"></script>
 </body>
 
 </html>
