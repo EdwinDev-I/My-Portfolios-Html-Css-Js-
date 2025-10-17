@@ -9,6 +9,30 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: pop-in 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 
@@ -426,7 +450,7 @@ article .icon {
 
 .project-img1 {
   border-radius: 2rem;
-  width: 280px;
+  width: 250px;
   height: 180px;
 }
 
@@ -438,6 +462,98 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+.explanation-container {
+   background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.dit {
+  margin-left: -20px;
+}
+
+.dit,
+.dits {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.explanation {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.explanation div {
+  white-space: nowrap;
+  color: rgb(133, 132, 132);
+  font-weight: 400;
+}
+
+.explanation span {
+  color: black;
+}
+
+
+.explanation h2 {
+  position: relative;
+  margin-bottom: 30px !important;
+  white-space: nowrap;
+}
+.explanation h2::after {
+  content: '';
+  position: absolute;
+  left: 80px;
+  right: -6px;
+  bottom: -12px;
+  width: 50%;
+  height: 3px;
+  background: black;
+  border-radius: 5px;
+  transform-origin:right;
+  transform: scaleX(0);
+  transition: transform .5s;
+
+}
+
+.explanation h2::after {
+  transform: scaleX(1);
+  transform-origin: left;
+} 
+
+
+.js-click,
+.js-clicks {
+  cursor: pointer;
+}
+
+.explanation .js-text1 {
+  position: relative;
+  white-space: wrap;
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: rgb(145, 143, 143) 1px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-bottom: 5px;
+}
+
+.explanation .js-text2 {
+  position: relative;
+  white-space: wrap;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: rgb(145, 143, 143) 1px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-bottom: 5px;
 }
 
 /*Contact*/

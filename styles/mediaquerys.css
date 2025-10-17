@@ -6,6 +6,9 @@
  .about-containers {
   flex-wrap: wrap;
  }
+  .explanation {
+    margin: 15px;
+  }
 }
 
 
@@ -42,6 +45,9 @@
   .about-containers {
     margin-top: 0;
   }
+   .explanation {
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -64,6 +70,7 @@
   .contact-infor-upper-container,
   .btn-container {
    flex-wrap: wrap;
+   flex-direction: column;
   }
   .contact-infor-container {
     margin: 0;
@@ -98,5 +105,8 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .explanation {
+    margin: 15px;
   }
 }
